@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Make Music with JavaScript</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/tunajs@1.0.15/tuna-min.js"></script>
+    <script src="https://unpkg.com/piano-keys-webcomponent-v0@1.0.3/dist/index.umd.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+  </head>
+  <body lang="en" class="bg-green-100 container mx-auto px-4">
+    <h1 class="font-sans text-7xl m-20 text-center">
+      Make Music with JavaScript
+    </h1>
+    <section class="font-sans text-md">
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Play One Note</h2>
+        <button
+          id="btn1"
+          class="
+            bg-green-300
+            hover:bg-green-400
+            text-white
+            font-bold
+            py-2
+            px-4
+            rounded
+          "
+        >
+          Play
+        </button>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">
+          Play One Note By MIDI Number
+        </h2>
+        <button
+          id="btn2"
+          class="
+            bg-green-300
+            hover:bg-green-400
+            text-white
+            font-bold
+            py-2
+            px-4
+            rounded
+          "
+        >
+          Play
+        </button>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Play Chord</h2>
+        <button
+          id="btn3"
+          class="
+            bg-green-300
+            hover:bg-green-400
+            text-white
+            font-bold
+            py-2
+            px-4
+            rounded
+          "
+        >
+          Play
+        </button>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Change Chords</h2>
+        <button
+          id="btn4"
+          class="
+            bg-green-300
+            hover:bg-green-400
+            text-white
+            font-bold
+            py-2
+            px-4
+            rounded
+          "
+        >
+          Play
+        </button>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Piano</h2>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <piano-keys
+            id="interactive-piano"
+            key-count="36"
+            keyboard-layout="C"
+          ></piano-keys>
+        </div>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Play a Sample</h2>
+        <p class="text-xs leading-relaxed text-black mb-4 italic">
+          Thanks to
+          <a
+            href="https://samplefocus.com/users/jake-thomas/samples"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            Jake Thomas
+          </a>
+          on
+          <a
+            href="https://samplefocus.com/"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            samplefocus.com
+          </a>
+        </p>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <button
+            id="btn5"
+            class="
+              bg-green-300
+              hover:bg-green-400
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+            "
+          >
+            Play
+          </button>
+        </div>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">
+          Play a Sample With Effects
+        </h2>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <button
+            id="btn6"
+            class="
+              bg-green-300
+              hover:bg-green-400
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+            "
+          >
+            Play
+          </button>
+        </div>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Play a Song</h2>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <button
+            id="btnSong"
+            class="
+              bg-green-300
+              hover:bg-green-400
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+            "
+          >
+            Play
+          </button>
+        </div>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">
+          MIDI Controllers
+        </h2>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <p>Input devices detected: <span id="midiInputCount"></span></p>
+          <p>Current input device: <span id="midiInputName"></span></p>
+        </div>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Links</h2>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            Web Audio API Documentation
+          </a>
+          <a
+            href="http://www.somascape.org/midi/basic/notes.html"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            MIDI Note Numbers
+          </a>
+        </div>
+      </section>
+      <section class="text-black text-center bg-white rounded-xl p-3 m-12">
+        <h2 class="text-xl leading-relaxed text-black mb-4">Packages</h2>
+        <div class="p-3 max-w-lg mx-auto space-x-4">
+          <a
+            href="https://tonejs.github.io/"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            Tone.js
+          </a>
+          <a
+            href="https://github.com/Theodeus/tuna/wiki/Getting-started"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            Tuna.js
+          </a>
+          <a
+            href="https://crswty.github.io/piano-keys-webcomponent/"
+            target="_blank"
+            noreferrer
+            class="text-green-600 hover:text-green-400 font-bold"
+          >
+            Piano Keys web component
+          </a>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
