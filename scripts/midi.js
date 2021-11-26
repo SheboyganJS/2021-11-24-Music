@@ -44,6 +44,7 @@ function midiInputMessageHandler(event) {
     }
   } else if (cmd === 128) {
     // 128 = NOTE OFF on CHANNEL 1
+    playPiano(noteNumber, "up");
   } else if (cmd === 176) {
     // Volume
   }
